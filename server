@@ -1,0 +1,18 @@
+<?php
+/*
+ * PHP Server
+ *
+ * To start the built-in web server run from the root directory:
+ * |> php -S localhost:9999 -t web server
+ */
+$path = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+);
+
+if ($path !== '/' && file_exists(__DIR__.'/web'.$path)) {
+    return false;
+}
+
+unset($path);
+
+require_once __DIR__.'/web/index.php';
