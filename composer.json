@@ -3,15 +3,9 @@
     "description": "The Ezra platform.",
     "type": "library",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:nullaidev/ezra-core.git"
-        }
-    ],
     "require": {
-        "php": ">=7.4.0",
-        "nullaidev/ezra-core": "dev-main",
+        "php": ">=8",
+        "nullaidev/ezra-framework": "0.*",
         "ext-mbstring": "*",
         "ext-json": "*"
     },
