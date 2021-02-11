@@ -19,19 +19,16 @@ define('APP_ENV', 'production');
  | For developers: Ezra debugging mode.
  |
  | Change this to true to enable the display of notices during development.
- | It is strongly recommended that plugin and theme developers use WP_DEBUG
- | in their development environments.
  */
 define('EZRA_DEBUG', false);
-
+define('EZRA_ERROR', E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR);
 
 /*#@+
  | Unique Salts.
  |
  | Change these to different unique phrases!
- | You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- | You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
  */
 define('APP_SALT_AUTH', 'unique_salt_goes_here');
 define('APP_SALT_CSRF', 'unique_salt_goes_here');
+define('APP_SALT_COOKIE', 'unique_salt_goes_here');
 /*#@-*/
